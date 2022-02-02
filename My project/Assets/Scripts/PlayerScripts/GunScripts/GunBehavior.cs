@@ -11,6 +11,7 @@ public class GunBehavior : MonoBehaviour
     
     private float damage;
 
+    //Common gun behavior
     private void Update()
     {
         OnActionTriggeredFunc(timeDelay, damage);

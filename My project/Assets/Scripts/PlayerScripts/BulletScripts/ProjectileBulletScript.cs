@@ -24,7 +24,7 @@ public class ProjectileBulletScript : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
-            other.gameObject.GetComponent<Health>().Dodamage(damage);
+            other.gameObject.GetComponent<EnemyHealth>().Dodamage(damage);
             Destroy(gameObject);
         }
 

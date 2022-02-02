@@ -33,6 +33,7 @@ public class GunManager : MonoBehaviour
 
     }
 
+    //Setting the position of my crosshair(Aim) where there's a way hitting floor from camera
     void SetShootPos()
     {
         ray = cam.ScreenPointToRay(Input.mousePosition);
@@ -42,6 +43,7 @@ public class GunManager : MonoBehaviour
             shootPoint.position = hit.point;
         }
     }
+    //Enables the slected gun and desables the rest
     void GunEnabler(int index)
     {
         foreach(GameObject gun in guns)
@@ -59,10 +61,12 @@ public class GunManager : MonoBehaviour
                
         }
     }
+    //Since there is no method to get index of array element i created my own
     string IndexToname(int index)
     {
         return guns[index].name;
     }
+    //Select gun indes on user input
     void SelectGunOnInput()
     {
         if (Input.GetKey(KeyCode.Alpha1))

@@ -20,9 +20,13 @@ public class EnemyControllerAi : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Look at player 
         transform.LookAt(targetPlayer);
+        //and keep moving towards the player
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
     }
+
+    //Destroying on wall hit and reducing player health and dying if hit it
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Wall"))
