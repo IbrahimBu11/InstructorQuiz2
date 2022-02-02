@@ -5,7 +5,7 @@ using UnityEngine;
 public class SonicBulletScript : MonoBehaviour
 {
     public float speed = 30f;
-    public int damage = 30;
+    public int damage = 40;
     public float power = 100;
     Vector3 rot;
 

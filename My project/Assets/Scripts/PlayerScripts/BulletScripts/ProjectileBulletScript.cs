@@ -11,6 +11,7 @@ public class ProjectileBulletScript : MonoBehaviour
      void Start()
     {
         rot = transform.rotation.eulerAngles;
+        //keep the bullet straight
         rot.x = 0;
     }
     void Update()
@@ -18,6 +19,9 @@ public class ProjectileBulletScript : MonoBehaviour
         transform.Translate(Vector3.forward * Time.deltaTime * speed);
 
         transform.rotation = Quaternion.Euler (rot);
+        //if(transform.position.z > 50 || transform.position.x > 50 || transform.position.z < -50 || transform.position.x < 50) {
+        //    Destroy(gameObject);
+        //}
         
     }
     private void OnTriggerEnter(Collider other)
